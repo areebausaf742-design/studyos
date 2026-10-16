@@ -1,3 +1,5 @@
+import { AuthLink } from "@/components/auth-link";
+
 export function LandingHeader() {
   return (
     <header className="landing-header">
@@ -11,7 +13,7 @@ export function LandingHeader() {
         <a href="#focus">Focus</a>
         <a href="#progress">Progress</a>
       </nav>
-      <a className="header-cta" href="/app">Open StudyOS <span aria-hidden="true">↗</span></a>
+      <AuthLink className="header-cta">Open StudyOS <span aria-hidden="true">↗</span></AuthLink>
     </header>
   );
 }

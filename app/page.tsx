@@ -3,10 +3,12 @@ import {
   IconStrip,
   LandingHeader,
   ParticleHero,
+  ProductIntro,
   ProgressScene,
   ScrollStatement,
   StudyScene,
 } from "@/components/landing";
+import { AuthLink } from "@/components/auth-link";
 
 const navItems = [
   ["Today", "today"],
@@ -25,7 +27,7 @@ export default function LandingPage() {
           <p className="eyebrow">A clearer way to study</p>
           <h1>Your operating<br className="desktop-only" /> system for learning.</h1>
           <p className="lede">Your subjects, tasks and deadlines. One clear place to decide what comes next.</p>
-          <a className="landing-button" href="/app">Start your study plan <span aria-hidden="true">→</span></a>
+          <AuthLink className="landing-button">Start your study plan <span aria-hidden="true">→</span></AuthLink>
         </div>
         <div className="hero-scene" data-scene="begin">
           <ParticleHero />
@@ -36,6 +38,7 @@ export default function LandingPage() {
 
       <ScrollStatement />
       <IconStrip />
+      <ProductIntro />
 
       <section className="landing-section split-section" id="today">
         <div className="landing-copy">
@@ -81,7 +84,7 @@ export default function LandingPage() {
           <p className="eyebrow">Make space for what’s next</p>
           <h2>A calmer start.<br />A clearer next step.</h2>
           <p className="lede">Bring your subjects, tasks and deadlines together. Then take it one study session at a time.</p>
-          <a className="landing-button" href="/app">Start your study plan <span aria-hidden="true">→</span></a>
+          <AuthLink className="landing-button">Start your study plan <span aria-hidden="true">→</span></AuthLink>
         </div>
         <GlassStack />
       </section>

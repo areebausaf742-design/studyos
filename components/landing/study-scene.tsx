@@ -1,4 +1,5 @@
 import { GlassStack } from "./glass-stack";
+import { AuthLink } from "@/components/auth-link";
 
 type StudySceneProps = { type: "today" | "learn" | "focus" };
 
@@ -12,7 +13,7 @@ export function StudyScene({ type }: StudySceneProps) {
           <p>Review mitosis stages</p>
           <strong>25:00</strong>
           <small>FOCUS SESSION</small>
-          <a href="/app">Start focus <span aria-hidden="true">→</span></a>
+          <AuthLink>Start focus <span aria-hidden="true">→</span></AuthLink>
         </div>
       </div>
     );
@@ -31,7 +32,7 @@ export function StudyScene({ type }: StudySceneProps) {
         <div className="mock-task done">✓ <span>Read cell division chapter<small>Biology</small></span></div>
         <div className="mock-task">□ <span>Review mitosis stages<small>Biology</small></span></div>
         <div className="mock-task">□ <span>Solve quadratic equations<small>Science/maths</small></span></div>
-        <a href="/app" className="mock-add">+ Add task</a>
+        <AuthLink className="mock-add">+ Add task</AuthLink>
         <div className="exam-card"><b>OCT<br /><strong>21</strong></b><span>Cell biology exam<small>Exam · Biology</small></span></div>
       </div>
     </div>
